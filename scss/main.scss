@@ -1,0 +1,617 @@
+@import "./variables.scss";
+
+.about {
+   @include element_position(flex, row, 0, space-between, 0, 0);
+   background-color: $secondary-color;
+   padding: 5% 10% 10% 10%;
+   @include breakpoint(sxl) {
+      @include element_position(0, column, 0, 0, 0, 10px);
+      padding: 5% 10%;
+   }
+   &_left_hello {
+      @include element_position(flex, row, 0, 0, center, 10px);
+      margin-bottom: 10px;
+   }
+   &_left_hello_foto {
+      @include circle(90px, 90px, 50%, 0);
+      overflow: hidden;
+   }
+   &_left_hello_friend {
+      @include font-style(34px, 900, 0, 1.2, 0);
+      height: fit-content;
+      padding: 8px 24px;
+      border-radius: 30px;
+      background-color: $white;
+   }
+   &_left_availabel {
+      background-color: $white;
+      border-radius: 25px;
+      width: fit-content;
+      padding: 4px 14px;
+      margin-bottom: 10px;
+      p {
+         @include font-style(34px, 900, 0, 1.2, $secondary-color);
+      }
+   }
+   &_left_btn {
+      padding: 12px 24px;
+      background-color: $primary-color;
+      width: fit-content;
+      border-radius: 25px;
+      a {
+         display: block;
+         @include font-style(18px, 500, 0, 1, $white);
+      }
+   }
+   &_left_btn:hover {
+      background-color: $secondary-color;
+   }
+}
+.about_right {
+   position: relative;
+   width: 50%;
+   height: 100%;
+   border:1px solid red;
+   @include breakpoint(sxl) {
+      width: 18%;
+   }
+   &_circle {
+      @include circle(367px, 367px, 50%, $white);
+      margin-left: 15%;
+      @include breakpoint(sxl) {
+         @include circle(100px, 100px, 50%, $white);
+         margin-left: 15%;
+      }
+   }
+   &_foto {
+      position: absolute;
+      width: 550px;
+      height: 367px;
+      top: 20%;
+      left: 5%;
+      z-index: 2;
+      @include breakpoint(sxl) {
+         width: 100px;
+         height: 100px;
+         top: 10%;
+         left: 30%;
+      }
+   }
+}
+
+.history {
+   @include element_position(flex, row, 0, space-between, 0, 50px);
+   padding: 9% 10% 15% 10%;
+   @include breakpoint(sxl) {
+      @include element_position(flex, column, 0, 0, 0, 10px);
+      padding: 9% 3% 15% 3%;
+   }
+}
+.history_left {
+   width: 50%;
+   @include breakpoint(sxl) {
+      width: 100%;
+   }
+   &_foto {
+      border-radius: 20px;
+      height: 400px;
+      overflow: hidden;
+   }
+}
+.history_right {
+   width: 50%;
+   @include breakpoint(sxl) {
+      width: 100%;
+   }
+   .history_right_story {
+      @include element_position(flex, row, 0, center, center, 20px);
+      width: fit-content;
+      background-color: $secondary-color;
+      border-radius: 20px;
+      padding: 2% 5% 2% 18%;
+      margin-bottom: 10%;
+      p {
+         @include font-style(35px, 900, 1px, 1.5, $white);
+         @include breakpoint(md) {
+            @include font-style(20px, 700, 0, 1, $white);
+         }
+      }
+   }
+   &_story_foto {
+      @include circle(160px, 160px, 50%, 0);
+      overflow: hidden;
+      @include breakpoint(md) {
+         @include circle(90px, 90px, 50%, 0);
+      }
+   }
+   &_title {
+      @include font-style(36px, 900, 2px, 0, 0);
+      margin-bottom: 8%;
+      @include breakpoint(md) {
+         @include font-style(20px, 700, 1px, 0, 0);
+      }
+   }
+   &_text {
+      p {
+         @include font-style(20px, 400, 1px, 1.4, rgb(113, 114, 117));
+         margin-bottom: 2%;
+      }
+   }
+}
+
+.date {
+   @include element_position(flex, row, 0, 0, 0, 30px);
+   background-color: rgb(248, 249, 250);
+   border-bottom: 1px solid rgb(233, 236, 239);
+   border-top: 1px solid rgb(233, 236, 239);
+   padding: 10%;
+   @include breakpoint(xl) {
+      @include element_position(0, column, 0, 0, 0, 40px);
+      padding: 10% 1%;
+   }
+   &_left {
+      width: 50%;
+      border: 1px solid rgb(233, 236, 239);
+      border-radius: 20px;
+      overflow: hidden;
+      @include breakpoint(xl) {
+         width: fit-content;
+      }
+   }
+   &_left_inf {
+      @include font-style(30px, 900, 1px, 0, 0);
+      padding: 30px;
+   }
+   &_left_list {
+      @include element_position(flex, row, 0, 0, 0, 0);
+      border-top: 1px solid rgb(233, 236, 239);
+   }
+   &_left_list_name {
+      @include font-style(25px, 600, 0, 2, $secondary-color);
+      text-align: center;
+      border-right: 1px solid rgb(233, 236, 239);
+   }
+   &_left_list_joshua {
+      @include font-style(20px, 400, 0, 2.5, 0);
+      color: rgb(129, 133, 136);
+      width: 100%;
+      a {
+         @include font-style(20px, 400, 0, 2.5, rgb(129, 133, 136));
+      }
+   }
+   &_left_list_name li:nth-child(odd),
+   &_left_list_joshua li:nth-child(odd) {
+      padding: 0 30px;
+      width: 100%;
+   }
+   &_left_list_name li:nth-child(even),
+   &_left_list_joshua li:nth-child(even) {
+      background-color: rgb(255, 255, 255);
+      padding: 0 30px;
+   }
+   &_left_list_joshua li a:hover,
+   &_left_list_joshua li a:hover {
+      color: $secondary-color;
+   }
+
+   &_right {
+      @include element_position(flex, column, 0, 0, 0, 0);
+      width: 50%;
+      @include breakpoint(xl) {
+         width: fit-content;
+      }
+      strong {
+         display: block;
+         @include font-style(60px, 900, 0, 1, 0);
+      }
+      p {
+         font-size: 20px;
+         color: $secondary-color;
+      }
+      &_first {
+         display: flex;
+         &_block1 {
+            border-right: 1px solid rgb(233, 236, 239);
+            border-bottom: 1px solid rgb(233, 236, 239);
+            width: 50%;
+            padding: 0 30px 20px 0;
+         }
+         &_block2 {
+            width: 50%;
+            padding-left: 40px;
+            border-bottom: 1px solid rgb(233, 236, 239);
+         }
+      }
+      &_second {
+         @include element_position(flex, row, 0, 0, 0, 0);
+         &_block3 {
+            width: 50%;
+            padding-top: 20px;
+            border-right: 1px solid rgb(233, 236, 239);
+         }
+         &_block4 {
+            padding: 20px 0 0 50px;
+            width: 50%;
+         }
+      }
+   }
+}
+
+.companies {
+   padding: 10%;
+   p {
+      @include font-style(40px, 700, 1px, 0, 0);
+      text-align: center;
+      margin-bottom: 40px;
+      @include breakpoint(lg) {
+         @include font-style(22px, 500, 0, 0, 0);
+      }
+   }
+   &_logo {
+      @include element_position(flex, 0, wrap, center, 0, 30px);
+      font-size: 100px;
+      i:hover {
+         transform: scale(1.5);
+         transition: 1s;
+      }
+   }
+}
+
+.block {
+   border-bottom: 1px solid rgb(233, 236, 239);
+   border-top: 1px solid rgb(233, 236, 239);
+   background-color: rgb(248, 249, 250);
+   padding: 8% 15% 10% 15%;
+   margin-bottom: 10%;
+   &_services {
+      @include element_position(flex, 0, wrap, center, center, 20px);
+      background-color: $secondary-color;
+      border-radius: 10px;
+      padding: 1%;
+      margin-bottom: 5%;
+      &_img {
+         @include circle(160px, 160px, 50%, 0);
+         overflow: hidden;
+         @include breakpoint(lg) {
+            @include circle(70px, 70px, 50%, 0);
+         }
+      }
+      p {
+         @include font-style(45px, 800, 1px, 1px, $white);
+         @include breakpoint(lg) {
+            @include font-style(25px, 500, 0, 1px, $white);
+         }
+      }
+   }
+   .wrapper {
+      @include element_position(flex, 0, wrap, 0, 0, 30px);
+   }
+   &_cards {
+      background-color: $white;
+      border-radius: 20px;
+      width: fit-content;
+      overflow: hidden;
+      border: 2px solid transparent;
+      &_websites {
+         padding: 30px;
+      }
+      &_websites_title {
+         @include element_position(flex, 0, wrap, space-between, 0, 0);
+         border-bottom: 1px solid rgb(233, 236, 239);
+         padding: 0 30px 20px 0;
+         &_price {
+            position: relative;
+            @include font-style(18px, 700, 0, 1, $white);
+            background-color: rgb(83, 93, 161);
+            overflow: hidden;
+            padding: 6px 15px;
+            border-radius: 26px;
+         }
+         &_circle {
+            @include circle(30px, 30px, 50%, $secondary-color);
+            position: absolute;
+            z-index: 2;
+            transform: rotate(0deg) translateX(45px) translateY(-40px);
+         }
+         span {
+            display: block;
+            @include font-style(35px, 800, 1px, 1, rgb(0, 0, 0));
+         }
+      }
+      &_websites_text {
+         @include font-style(18px, 400, 1px, 1.4, rgb(113, 114, 117));
+         padding: 20px 0 20px 0;
+         margin-bottom: 30px;
+      }
+      a {
+         display: inline-block;
+         @include font-style(20px, 400, 1px, 0, rgb(113, 114, 117));
+         border-radius: 25px;
+         padding: 14px 18px;
+         border: 2px solid rgb(233, 236, 239);
+         @include breakpoint(md) {
+            @include font-style(14px, 400, 0, 0, rgb(113, 114, 117));
+         }
+      }
+      a:hover {
+         color: $white;
+         background-color: $secondary-color;
+         transition: all 0.5s;
+      }
+      a:visited {
+         border: 4px solid $primary-color;
+      }
+
+      &_websites_ikon {
+         @include element_position(flex, 0, 0, end, 0, 0);
+
+         &_glob {
+            width: fit-content;
+            border: 1px solid rgb(233, 236, 239);
+            border-radius: 10px;
+            transform: rotate(-45deg) translateY(55px);
+            padding: 70px 60px 100px 60px;
+            i {
+               font-size: 100px;
+            }
+         }
+      }
+   }
+   &_cards:hover {
+      border: 2px solid $secondary-color;
+      transition: all 0.7s;
+   }
+   &_cards:hover .block_cards_websites_title_price {
+      background-color: $secondary-color;
+      transition: all 0.5s;
+   }
+   &_cards:hover .block_cards_websites_title_circle {
+      background-color: rgb(83, 93, 161);
+      transition: all 0.5s;
+   }
+   &_cards:hover .block_cards_websites_ikon_glob {
+      background-color: $secondary-color;
+      transition: all 0.5s;
+   }
+   &_cards:hover i {
+      color: $white;
+      transition: all 0.5s;
+   }
+}
+
+section {
+   padding: 9%;
+   @include breakpoint(md) {
+      padding: 3%;
+   }
+   .wrapper {
+      @include element_position(flex, row, 0, end, 0, 0);
+      margin-bottom: 4%;
+      @include breakpoint(sxl) {
+         @include element_position(0, 0, 0, center, 0, 0);
+      }
+      .projects {
+         @include element_position(flex, row, wrap, center, center, 30px);
+         width: 65%;
+         border-radius: 20px;
+         background-color: $secondary-color;
+         padding: 0.5%;
+         @include breakpoint(lg) {
+            width: fit-content;
+         }
+         &_foto {
+            @include circle(160px, 160px, 50%, 0);
+            overflow: hidden;
+            @include breakpoint(lg) {
+               @include circle(100px, 100px, 50%, 0);
+            }
+         }
+         p {
+            @include font-style(40px, 900, 1px, 1, $white);
+            @include breakpoint(lg) {
+               @include font-style(30px, 900, 0, 1, $white);
+            }
+         }
+      }
+   }
+   .projects_example {
+      @include element_position(flex, row, 0, space-between, 0, 0);
+      @include breakpoint(sxl) {
+         @include element_position(0, 0, wrap, center, center, 10px);
+      }
+      .projects_example_branding {
+         border-radius: 20px;
+         background-color: rgb(248, 249, 250);
+         border: 2px solid transparent;
+         overflow: hidden;
+         padding: 2%;
+         span {
+            @include font-style(12px, 500, 1px, 1, $secondary-color);
+         }
+         p {
+            @include font-style(40px, 600, 1px, 1, black);
+            padding-bottom: 20px;
+         }
+         &_foto {
+            width: 270px;
+            height: 270px;
+            border-radius: 20px;
+            overflow: hidden;
+            transform: rotate(8deg) translateX(0px) translateY(62px);
+         }
+      }
+   }
+   .projects_example_branding:hover {
+      border: 2px solid $secondary-color;
+      transition: 0.7s;
+   }
+   .projects_example_branding:hover .projects_example_branding_foto {
+      transform: rotate(0deg) translateX(0px) translateY(0px);
+      transition: 0.5s;
+   }
+}
+
+.section_2 {
+   background-color: rgb(248, 249, 250);
+   border-top: 1px solid rgb(233, 236, 239);
+   border-bottom: 1px solid rgb(233, 236, 239);
+   padding: 9%;
+   @include breakpoint(lg) {
+      padding: 3%;
+   }
+   .conteiner_hi {
+      @include element_position(flex, 0, 0, center, center, 20px);
+      width: fit-content;
+      background-color: $secondary-color;
+      border-radius: 20px;
+      padding: 0.5% 9%;
+      margin-bottom: 4%;
+      &_foto {
+         @include circle(150px, 150px, 50%, 0);
+         overflow: hidden;
+         @include breakpoint(md) {
+            @include circle(80px, 80px, 50%, 0);
+         }
+      }
+      p {
+         @include font-style(50px, 500, 1px, 1, $white);
+         @include breakpoint(md) {
+            @include font-style(20px, 500, 0, 1, $white);
+         }
+      }
+   }
+   .container {
+      @include element_position(flex, row, 0, 0, 0, 20px);
+      @include breakpoint(lg) {
+         @include element_position(0, column, 0, 0, 0, 10px);
+      }
+      .container_left {
+         @include element_position(flex, row, 0, 0, 0, 0);
+         width: 50%;
+         background-color: rgb(255, 255, 255);
+         @include breakpoint(lg) {
+            width: fit-content;
+         }
+         span {
+            display: block;
+            @include font-style(11px, 900, 0, 1, rgb(0, 0, 0));
+            margin-bottom: 9%;
+         }
+         p {
+            @include font-style(16px, 400, 1px, 1, rgb(113, 114, 117));
+         }
+         &_first {
+            width: 50%;
+            padding: 10% 5% 5% 3%;
+            &_btn {
+               display: inline-block;
+               @include font-style(12px, 900, 0, 1, rgb(113, 114, 117));
+               padding: 10px 20px;
+               border-radius: 20px;
+               margin-bottom: 10px;
+            }
+            &_btn:hover {
+               color: $white;
+               background-color: $secondary-color;
+               transition: 0.4s;
+            }
+            &_ikon {
+               @include element_position(flex, row, wrap, 0, 0, 5px);
+               margin-bottom: 5%;
+               a {
+                  @include element_position(flex, row, 0, center, center, 0);
+                  text-align: center;
+                  @include circle(40px, 40px, 50%, 0);
+                  border: 1px solid rgb(113, 114, 117);
+                  color: rgb(0, 0, 0);
+               }
+               a:hover {
+                  background-color: $secondary-color;
+                  color: $white;
+               }
+            }
+         }
+         &_second {
+            width: 50%;
+            padding: 10% 5% 5% 3%;
+            a {
+               display: inline-block;
+               @include font-style(16px, 400, 1px, 1, rgb(113, 114, 117));
+               margin-bottom: 10%;
+            }
+            a:hover {
+               color: $secondary-color;
+            }
+            p {
+               margin-bottom: 15%;
+            }
+         }
+      }
+      .container_right {
+         width: 50%;
+         @include breakpoint(lg) {
+            width: fit-content;
+         }
+         &_input {
+            @include element_position(flex, row, wrap, space-between, 0, 0);
+            margin-bottom: 4%;
+            // @include breakpoint(md){
+            //       @include element_position(0, column, 0, 0, 0, 5px);
+            //    }
+            input {
+               @include font-style(20px, 400, 0, 1, 0);
+               border: 2px solid rgb(113, 114, 117);
+               width: 48%;
+               padding: 3%;
+            }
+         }
+         &_ikons {
+            @include element_position(flex, row, 0, space-between, 0, 0);
+            margin-bottom: 4%;
+            // @include breakpoint(md){
+            //    @include element_position(0, 0, wrap, 0, 0, 5px);
+            // }
+            &_i {
+               color: $secondary-color;
+               text-align: center;
+               background-color: rgb(255, 255, 255);
+               border: 2px solid rgb(113, 114, 117);
+               width: 20%;
+               padding: 3% 0;
+            }
+            &_i i {
+               margin-bottom: 5px;
+            }
+            &_i p {
+               @include font-style(16px, 400, 0, 1, rgb(113, 114, 117));
+            }
+         }
+         &_textarea textarea {
+            width: 100%;
+            padding: 2%;
+            border: 2px solid rgb(113, 114, 117);
+            margin-bottom: 4%;
+         }
+         &_textarea textarea:hover,
+         input:hover,
+         &_ikons_i:hover {
+            border: 2px solid $secondary-color;
+            transition: all 0.5s;
+            background-color: rgb(248, 249, 250);
+         }
+         &_btn {
+            @include element_position(flex, row, 0, end, 0, 0);
+            button {
+               @include font-style(15px, 900, 0, 1, $white);
+               background-color: $secondary-color;
+               padding: 18px 40px;
+               border-radius: 25px;
+               border: none;
+            }
+            button:hover {
+               background-color: $primary-color;
+            }
+         }
+      }
+   }
+}

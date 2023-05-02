@@ -1,0 +1,192 @@
+.element_row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: 0;
+      flex-wrap: 0;
+  -webkit-box-pack: 0;
+      -ms-flex-pack: 0;
+          justify-content: 0;
+  -webkit-box-align: 0;
+      -ms-flex-align: 0;
+          align-items: 0;
+  gap: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2% 10% 1% 10%;
+  background-color: #535da1;
+}
+@media (max-width: 992px) {
+  .navigation {
+    display: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: 0;
+        flex-wrap: 0;
+    -webkit-box-pack: 0;
+        -ms-flex-pack: 0;
+            justify-content: 0;
+    -webkit-box-align: 0;
+        -ms-flex-align: 0;
+            align-items: 0;
+    gap: 20px;
+    padding: 1% 3%;
+  }
+}
+.navigation_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: 0;
+      flex-wrap: 0;
+  -webkit-box-pack: 0;
+      -ms-flex-pack: 0;
+          justify-content: 0;
+  -webkit-box-align: 0;
+      -ms-flex-align: 0;
+          align-items: 0;
+  gap: 70px;
+}
+@media (max-width: 992px) {
+  .navigation_block {
+    display: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: 0;
+        flex-wrap: 0;
+    -webkit-box-pack: 0;
+        -ms-flex-pack: 0;
+            justify-content: 0;
+    -webkit-box-align: 0;
+        -ms-flex-align: 0;
+            align-items: 0;
+    gap: 10px;
+  }
+}
+.navigation_block_logo {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 0;
+  color: rgb(255, 250, 250);
+  padding-top: 3%;
+}
+.navigation_block_logo a {
+  color: rgb(255, 250, 250);
+}
+.navigation_block_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: 0;
+      flex-wrap: 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: 0;
+      -ms-flex-align: 0;
+          align-items: 0;
+  gap: 10px;
+}
+.navigation_block_list li {
+  padding-top: 2.5%;
+}
+.navigation_block_list li a {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 0;
+  color: rgb(255, 250, 250);
+}
+.navigation_block_list li a:hover {
+  color: #14b789;
+  border-bottom: 1px solid #14b789;
+}
+.navigation_phone {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: 0;
+      flex-wrap: 0;
+  -webkit-box-pack: 0;
+      -ms-flex-pack: 0;
+          justify-content: 0;
+  -webkit-box-align: 0;
+      -ms-flex-align: 0;
+          align-items: 0;
+  gap: 20px;
+}
+.navigation_phone_ikon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(255, 250, 250);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: 0;
+          flex-direction: 0;
+  -ms-flex-wrap: 0;
+      flex-wrap: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0;
+}
+.navigation_phone_ikon i {
+  font-size: 25px;
+}
+.navigation_phone_number {
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: 2px solid rgb(255, 250, 250);
+}
+.navigation_phone_number a {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 0;
+  color: rgb(255, 250, 250);
+}
+.navigation_phone_number:hover {
+  background-color: rgb(255, 250, 250);
+}
+.navigation_phone_number:hover a {
+  color: #14b789;
+}

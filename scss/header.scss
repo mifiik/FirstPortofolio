@@ -1,0 +1,65 @@
+@import "./variables.scss";
+
+.navigation {
+   @include element_position(flex, row, 0, 0, 0, 0);
+   justify-content: space-between;
+   padding: 2% 10% 1% 10%;
+   background-color: $primary-color;
+   @include breakpoint(xl) {
+      @include element_position(0, column, 0, 0, 0, 20px);
+      padding: 1% 3%;
+   }
+   &_block {
+      @include element_position(flex, row, 0, 0, 0, 70px);
+      @include breakpoint(xl) {
+         @include element_position(0, column, 0, 0, 0, 10px);
+      }
+   }
+   &_block_logo {
+      @include font-style(28px, 600, 0, 0, $white);
+      padding-top: 3%;
+      a {
+         color: $white;
+      }
+   }
+   &_block_list {
+      @include element_position(flex, row, 0, flex-start, 0, 10px);
+
+      li {
+         padding-top: 2.5%;
+         a {
+            @include font-style(12px, 600, 0, 0, $white);
+         }
+         a:hover {
+            color: $secondary-color;
+            border-bottom: 1px solid $secondary-color;
+         }
+      }
+   }
+
+   &_phone {
+      @include element_position(flex, row, 0, 0, 0, 20px);
+   }
+   &_phone_ikon {
+      @include circle(50px, 50px, 50%, $white);
+      @include element_position(flex, 0, 0, center, center, 0);
+      i {
+         font-size: 25px;
+      }
+   }
+
+   &_phone_number {
+      padding: 10px 25px;
+      border-radius: 20px;
+      border: 2px solid $white;
+      a {
+         @include font-style(18px, 700, 1px, 0, $white);
+      }
+   }
+   &_phone_number:hover {
+      background-color: $white;
+      a {
+         color: $secondary-color;
+      }
+   }
+}

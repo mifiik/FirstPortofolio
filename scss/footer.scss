@@ -1,0 +1,18 @@
+@import "./variables.scss";
+
+.footer {
+   @extend .element_row;
+   justify-content: center;
+   flex-wrap: wrap;
+   gap: 40px;
+   padding: 4%;
+   p {
+      @include font-style(16px, 400, 0, 1, rgb(113, 114, 117));
+   }
+   a {
+      @include font-style(16px, 700, 0, 1, rgb(76, 78, 82));
+   }
+   a:hover {
+      color: $secondary-color;
+   }
+}
